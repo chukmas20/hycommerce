@@ -252,14 +252,14 @@ const ClothesCategory: React.FC = () => {
       <input
         type="text"
         placeholder="Search products..."
-        className="mb-6 p-2 border border-gray-300 rounded-full text-xs "
+        className="mb-2 p-2 border border-gray-300 rounded-full text-xs "
         value={searchQuery}
         onChange={(e) => {
           setSearchQuery(e.target.value);
           setCurrentPage(1); // Reset to first page on search
         }}
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 cursor-pointer md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 cursor-pointer md:grid-cols-3 lg:grid-cols-3 gap-6">
         {currentProducts.map((product) => (
         <div key={product.id}>
         {product.category.name === "clothes" &&(
